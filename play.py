@@ -17,13 +17,13 @@ def mainLoop(pg,ww,cf,nl,nh):
     if tim != last_tim:
         if pg:
             player.music.load("./Music/Population_Growing/{}.mp3".format(str(tim)))
-        else if ww:
+        elif ww:
             player.music.load("./Music/Wild_World/{}.mp3".format(str(tim)))
-        else if cf:
+        elif cf:
             player.music.load("./Music/City_Folk/{}.mp3".format(str(tim)))
-        else if nl:
+        elif nl:
             player.music.load("./Music/New_Leaf/{}.mp3".format(str(tim)))
-        else if nh:
+        elif nh:
             player.music.load("./Music/New_Horizons/{}.mp3".format(str(tim)))
         player.music.play(loops=-1)
         sleep(10)
