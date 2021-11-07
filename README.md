@@ -32,4 +32,4 @@ This is the main program, that plays music hourly, changing with real time.
  - ``-nl`` Play music from *New Leaf*
  - ``-nh`` Play music from *New Horizons*
 
- - ``--volume`` Float between 0 and 1. Sets volume of music.
+ - ``--vol`` Float between 0 and 1. Sets volume of music.
