@@ -25,7 +25,7 @@ def mainLoop(pg,ww,cf,nl,nh):
             player.music.load("./Music/New_Leaf/{}.mp3".format(str(tim)))
         else if nh:
             player.music.load("./Music/New_Horizons/{}.mp3".format(str(tim)))
-        player.music.play()
+        player.music.play(loops=-1)
         sleep(10)
     last_tim=tim
 
