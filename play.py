@@ -8,12 +8,14 @@ parser.add_argument("-ww",help="Play music from Wild World",action="store_true")
 parser.add_argument("-cf",help="Play music from City Folk",action="store_true")
 parser.add_argument("-nl",help="Play music from New Leaf",action="store_true")
 parser.add_argument("-nh",help="Play music from New Horizons",action="store_true")
+parser.add_argument("--vol",type=float, default=1, help="Change volume")
 options = parser.parse_args()
 
 player.init()
-player.music.set_volume(1.0)
-def mainLoop(pg,ww,cf,nl,nh):
+
+def mainLoop(pg,ww,cf,nl,nh,vol):
     last_tim=-1
+    player.music.set_volume(vol)
     while True:
         tim = strftime("%H")
         if tim != last_tim:
