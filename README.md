@@ -22,7 +22,7 @@ This is used to rename files to a format readable by the program. It does *NOT* 
 
 This is the main program, that plays music hourly, changing with real time.
 
-``python format.py [-pg|-ww|-cf|-nl|nh]``
+``python format.py [-pg|-ww|-cf|-nl|-nh|--volume=VOLUME]``
 
 #### Options:
 
@@ -31,3 +31,5 @@ This is the main program, that plays music hourly, changing with real time.
  - ``-cf`` Play music from *City Folk*
  - ``-nl`` Play music from *New Leaf*
  - ``-nh`` Play music from *New Horizons*
+
+ - ``--volume`` Float between 0 and 1. Sets volume of music.
