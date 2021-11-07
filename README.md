@@ -22,7 +22,7 @@ This is used to rename files to a format readable by the program. It does *NOT* 
 
 This is the main program, that plays music hourly, changing with real time.
 
-``python format.py [-pg|-ww|-cf|-nl|-nh|--volume=VOLUME]``
+``python play.py [-pg|-ww|-cf|-nl|-nh|--volume=VOLUME]``
 
 #### Options:
 
