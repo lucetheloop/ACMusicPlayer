@@ -12,22 +12,24 @@ options = parser.parse_args()
 
 player.init()
 player.music.set_volume(1.0)
-def mainLoop(pg,ww,cf,nl,nh,last_tim=-1):
-    tim = strftime("%H")
-    if tim != last_tim:
-        if pg:
-            player.music.load("./Music/Population_Growing/{}.mp3".format(str(tim)))
-        elif ww:
-            player.music.load("./Music/Wild_World/{}.mp3".format(str(tim)))
-        elif cf:
-            player.music.load("./Music/City_Folk/{}.mp3".format(str(tim)))
-        elif nl:
-            player.music.load("./Music/New_Leaf/{}.mp3".format(str(tim)))
-        elif nh:
-            player.music.load("./Music/New_Horizons/{}.mp3".format(str(tim)))
-        player.music.play(loops=-1)
-        sleep(10)
-    last_tim=tim
+def mainLoop(pg,ww,cf,nl,nh):
+    last_tim=-1
+    while True:
+        tim = strftime("%H")
+        if tim != last_tim:
+            if pg:
+                player.music.load("./Music/Population_Growing/{}.mp3".format(str(tim)))
+            elif ww:
+                player.music.load("./Music/Wild_World/{}.mp3".format(str(tim)))
+            elif cf:
+                player.music.load("./Music/City_Folk/{}.mp3".format(str(tim)))
+            elif nl:
+                player.music.load("./Music/New_Leaf/{}.mp3".format(str(tim)))
+            elif nh:
+                player.music.load("./Music/New_Horizons/{}.mp3".format(str(tim)))
+            player.music.play(loops=-1)
+            sleep(1)
+        last_tim=tim
 
 while True:
     mainLoop(**vars(options))
