@@ -12,7 +12,7 @@ options = parser.parse_args()
 
 player.init()
 player.music.set_volume(1.0)
-def mainLoop(pg,ww,cf,nl,nh):
+def mainLoop(pg,ww,cf,nl,nh,last_tim=-1):
     tim = strftime("%H")
     if tim != last_tim:
         if pg:
