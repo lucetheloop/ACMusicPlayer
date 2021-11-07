@@ -9,8 +9,8 @@ print(files)
 for i in files:
     try:
         if "PM" in i:
-            os.rename(masterdir+i,[masterdir+str(int(s)+12)+".mp3" for s in i.split() if s.isdigit()][0])
+            os.rename(masterdir+i,[masterdir+str(int(s)+12)+".mp3" for s in i.replace("PM","").split() if s.isdigit()][0])
         else:
-            os.rename(masterdir+i,[masterdir+s+".mp3" for s in i.split() if s.isdigit()][0])
+            os.rename(masterdir+i,[masterdir+s+".mp3" for s in i.replace("AM","").split() if s.isdigit()][0])
     except IndexError:
         pass
