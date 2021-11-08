@@ -20,15 +20,15 @@ def mainLoop(pg,ww,cf,nl,nh,vol):
         tim = strftime("%H")
         if tim != last_tim:
             if pg:
-                player.music.load("./Music/Population_Growing/{}.mp3".format(str(tim)))
+                player.music.load("./Music/Population_Growing/{}.mp3".format(str(int(tim))))
             elif ww:
-                player.music.load("./Music/Wild_World/{}.mp3".format(str(tim)))
+                player.music.load("./Music/Wild_World/{}.mp3".format(str(int(tim))))
             elif cf:
-                player.music.load("./Music/City_Folk/{}.mp3".format(str(tim)))
+                player.music.load("./Music/City_Folk/{}.mp3".format(str(int(tim))))
             elif nl:
-                player.music.load("./Music/New_Leaf/{}.mp3".format(str(tim)))
+                player.music.load("./Music/New_Leaf/{}.mp3".format(str(int(tim))))
             elif nh:
-                player.music.load("./Music/New_Horizons/{}.mp3".format(str(tim)))
+                player.music.load("./Music/New_Horizons/{}.mp3".format(str(int(tim))))
             player.music.play(loops=-1)
             sleep(1)
         last_tim=tim
