@@ -12,5 +12,9 @@ for i in files:
             os.rename(masterdir+i,[masterdir+str(int(s)+12)+".mp3" for s in i.replace("PM","").split() if s.isdigit()][0])
         else:
             os.rename(masterdir+i,[masterdir+s+".mp3" for s in i.replace("AM","").split() if s.isdigit()][0])
+        
     except IndexError:
         pass
+os.rename(masterdir+"12.mp3",masterdir+"24.mp3.temp")
+os.rename(masterdir+"24.mp3",masterdir+"12.mp3")
+os.rename(masterdir+"24.mp3.temp", masterdir+"24.mp3")
